@@ -11,6 +11,7 @@ namespace AttackMove
         public string Attack()
         {
             return "弓で攻撃した！";
+
         }
     }
 }
