@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35004.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttackMove", "AttackMove\AttackMove.csproj", "{78C3970E-B5AE-4C2F-A485-90F3924C04BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{78C3970E-B5AE-4C2F-A485-90F3924C04BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78C3970E-B5AE-4C2F-A485-90F3924C04BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78C3970E-B5AE-4C2F-A485-90F3924C04BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78C3970E-B5AE-4C2F-A485-90F3924C04BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FCC4AA75-0269-46C9-B35A-FC1371CEBC19}
+	EndGlobalSection
+EndGlobal
