@@ -44,4 +44,9 @@ namespace AttackMove
             MessageBox.Show(selectedAttack);
         }
     }
+    //IAttackインターフェース
+    public interface IAttack
+    {
+        string Attack();
+    }
 }
