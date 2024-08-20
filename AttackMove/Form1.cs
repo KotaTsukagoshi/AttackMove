@@ -28,21 +28,28 @@ namespace AttackMove
 
         private void button1_Click(object sender, EventArgs e)
         {
-            switch (comboBox1.SelectedItem.ToString())
+            //switch文null時用
+            if (comboBox1.SelectedItem != null)
             {
-                case "剣":
-                    character.AttackType = new SwordAttack();
-                    break;
-                case "魔法":
-                    character.AttackType = new MagicAttack();
-                    break;
-                case "弓":
-                    character.AttackType = new BowAttack();
-                    break;
+                switch (comboBox1.SelectedItem.ToString())
+                {
+                    case "剣":
+                        character.AttackType = new SwordAttack();
+                        break;
+                    case "魔法":
+                        character.AttackType = new MagicAttack();
+                        break;
+                    case "弓":
+                        character.AttackType = new BowAttack();
+                        break;
+                }
+
+                string result = character.PerformAttack();
+                MessageBox.Show(result);
             }
 
-            string result = character.PerformAttack();
-            MessageBox.Show(result);
+            //nullなら抜ける
+            else { return; }
         }
     }
     //IAttackインターフェース
