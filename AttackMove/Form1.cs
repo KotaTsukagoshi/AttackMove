@@ -13,7 +13,7 @@ namespace AttackMove
 {
     public partial class Form1 : Form
     {
-        private string selectedAttack;
+        private Character character;
 
         public Form1()
         {
@@ -23,7 +23,7 @@ namespace AttackMove
             comboBox1.Items.Add("魔法");
             comboBox1.Items.Add("弓");
 
-            selectedAttack = "剣";  // 初期選択
+            character = new Character("勇者", new SwordAttack());
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -31,17 +31,18 @@ namespace AttackMove
             switch (comboBox1.SelectedItem.ToString())
             {
                 case "剣":
-                    selectedAttack = "剣で攻撃した！";
+                    character.AttackType = new SwordAttack();
                     break;
                 case "魔法":
-                    selectedAttack = "魔法を使った！";
+                    character.AttackType = new MagicAttack();
                     break;
                 case "弓":
-                    selectedAttack = "弓で攻撃した！";
+                    character.AttackType = new BowAttack();
                     break;
             }
 
-            MessageBox.Show(selectedAttack);
+            string result = character.PerformAttack();
+            MessageBox.Show(result);
         }
     }
     //IAttackインターフェース
