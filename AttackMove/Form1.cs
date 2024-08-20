@@ -14,6 +14,7 @@ namespace AttackMove
     public partial class Form1 : Form
     {
         private Character character;
+        private Enemy enemy;
 
         public Form1()
         {
@@ -24,6 +25,8 @@ namespace AttackMove
             comboBox1.Items.Add("弓");
 
             character = new Character("勇者", new SwordAttack());
+            enemy = new Enemy(10,"スライム");
+            MessageBox.Show(enemy.EnemyAppearance());
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -43,7 +46,7 @@ namespace AttackMove
                         character.AttackType = new BowAttack();
                         break;
                 }
-
+                
                 string result = character.PerformAttack();
                 MessageBox.Show(result);
             }
